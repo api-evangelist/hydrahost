@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.hydrahost.com/ + live probes of https://brokkr.hydrahost.com/api/v1
+versioning:
+  scheme: uri-path
+  current: v1
+  observed_base: https://brokkr.hydrahost.com/api/v1
+  note: >-
+    Versioning observed live — the Brokkr API serves under /api/v1. No published
+    deprecation/sunset policy was found on the public docs (docs.hydrahost.com is a
+    client-rendered SPA and could not be read verbatim).
+status_page: https://status.hydrahost.com/
+status_page_provider: Better Stack
+status_page_components:
+- name: brokkr.hydrahost.com
+  observed_status: operational
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: not found on public surface
+sla:
+  url: null
+  uptime_target: null
+deprecated_operations: []

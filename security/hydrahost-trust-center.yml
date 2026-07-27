@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+url: https://security.hydrahost.com/
+certifications: []
+note: >-
+  Hydra Host publishes a Trust Center at https://security.hydrahost.com/ (page title
+  "Trust center"). The page is a client-rendered single-page app, so specific named
+  certifications (e.g. SOC 2 / ISO 27001) could not be verified verbatim from the
+  server-rendered HTML and are therefore NOT asserted here. Additional compliance
+  surface observed on the marketing site: https://hydrahost.com/legal/export-compliance/.
+  No Compliance pointer is emitted because no certification was verified.
+evidence:
+- source: https://security.hydrahost.com/
+  kind: trust-center-page
+  keywords:
+  - trust center

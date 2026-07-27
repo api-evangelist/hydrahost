@@ -1,8 +1,28 @@
 aid: hydrahost
 name: Hydrahost
-description: Hydrahost is a company surfaced as a portfolio company of kindred-ventures and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Hydra Host is a bare-metal GPU cloud provider that rents and sells dedicated
+  NVIDIA GPU servers (B200, H200, RTX 4090 and more) with full root access across
+  40+ global data centers for AI training, inference, developer platforms, and
+  neocloud infrastructure. Its Brokkr platform — marketed as the "AI Factory
+  Operating System" — exposes a single REST API (base
+  https://brokkr.hydrahost.com/api/v1) to provision, terminate, and manage GPU
+  fleets programmatically across every data center and OEM hardware stack (Quanta,
+  Lenovo, HPE, NVIDIA), with real-time inventory, interruptible/on-demand/reserved
+  contract terms, and single-tenant, encrypted "Confidential Metal" compute.
 url: https://raw.githubusercontent.com/api-evangelist/hydrahost/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://hydrahost.com/images/large-og.jpg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,15 +31,82 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- GPU Cloud
+- Bare Metal
+- Artificial Intelligence
+- Machine Learning
+- Cloud Infrastructure
+- Compute
+- Neocloud
+apis:
+- name: Brokkr API
+  description: >-
+    The Brokkr REST API provisions, terminates, and manages Hydra Host GPU fleets
+    programmatically across every data center and OEM hardware stack, and exposes
+    real-time GPU inventory. Observed live: uri-path versioning at /api/v1, JSON
+    responses, and a consistent JSON error envelope
+    (statusCode/timestamp/path/message/error). GET /api/v1/inventory returns the
+    public GPU inventory.
+  humanURL: https://docs.hydrahost.com/docs/brokkr-api-overview
+  baseURL: https://brokkr.hydrahost.com/api/v1
+  tags:
+  - GPU Cloud
+  - Bare Metal
+  - Compute
+  properties:
+  - type: Documentation
+    url: https://docs.hydrahost.com/
+  - type: APIReference
+    url: https://docs.hydrahost.com/docs/brokkr-api-overview
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/hydrahost-domain-security.yml
+- type: TrustCenter
+  url: security/hydrahost-trust-center.yml
+- type: Lifecycle
+  url: lifecycle/hydrahost-lifecycle.yml
+- type: StatusPage
+  url: https://status.hydrahost.com/
+- type: ErrorCatalog
+  url: errors/hydrahost-problem-types.yml
+- type: Conventions
+  url: conventions/hydrahost-conventions.yml
+- type: LLMsTxt
+  url: llms/hydrahost-llms.txt
 - type: Website
   url: https://hydrahost.com/
+- type: DeveloperPortal
+  url: https://docs.hydrahost.com/
+- type: Documentation
+  url: https://docs.hydrahost.com/
+- type: APIReference
+  url: https://docs.hydrahost.com/docs/brokkr-api-overview
+- type: Blog
+  url: https://hydrahost.com/blog/
+- type: Pricing
+  url: https://hydrahost.com/calculator/
+- type: SignUp
+  url: https://brokkr.hydrahost.com/login
+- type: Login
+  url: https://brokkr.hydrahost.com/login
+- type: Support
+  url: https://hydrahost.com/contact/
+- type: TermsOfService
+  url: https://hydrahost.com/legal/terms-of-service/
+- type: PrivacyPolicy
+  url: https://hydrahost.com/legal/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/hydra-host
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

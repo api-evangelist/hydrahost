@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: derived
+source: live responses observed from https://brokkr.hydrahost.com/api/v1
+format: custom-json-envelope
+envelope:
+  media_type: application/json
+  fields:
+  - statusCode
+  - timestamp
+  - path
+  - message
+  - error
+  example: |
+    {"statusCode":404,"timestamp":"2026-07-19T14:43:07.428Z","path":"/api","message":"Cannot GET /api","error":"Not Found"}
+  note: >-
+    Error shape observed directly from the live Brokkr API (a NestJS-style JSON
+    envelope). This is NOT RFC 9457 application/problem+json. Only the 404 status
+    was exercised against public routes; the full problem-type registry is not
+    published on the public docs (docs.hydrahost.com is a client-rendered SPA).
+problems:
+- status: 404
+  error: Not Found
+  title: Resource not found
+  observed: true
+  source: live GET https://brokkr.hydrahost.com/api (and /api/v1, /api/health)

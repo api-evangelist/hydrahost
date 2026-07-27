@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: derived
+source: live probes of https://brokkr.hydrahost.com/api/v1 + https://hydrahost.com/
+api: Brokkr API
+base_url: https://brokkr.hydrahost.com/api/v1
+versioning:
+  style: uri-path
+  current: v1
+  observed: true
+media_type:
+  request: application/json
+  response: application/json
+error_envelope:
+  ref: errors/hydrahost-problem-types.yml
+  fields:
+  - statusCode
+  - timestamp
+  - path
+  - message
+  - error
+authentication:
+  note: >-
+    Public inventory (GET /api/v1/inventory) is reachable without credentials.
+    Provisioning/management operations require authentication per the docs, but the
+    exact scheme (API key header vs. bearer token) could not be verified verbatim
+    because docs.hydrahost.com is a client-rendered SPA. No authentication artifact
+    is asserted to avoid fabrication.
+idempotency:
+  supported: unknown
+  note: no idempotency-key contract observed on the public surface
+pagination:
+  style: unknown
+  note: >-
+    GET /api/v1/inventory returns a top-level {"data":[...]} envelope; pagination
+    params were not confirmed.
+cross_links:
+  errors: errors/hydrahost-problem-types.yml
+  lifecycle: lifecycle/hydrahost-lifecycle.yml
