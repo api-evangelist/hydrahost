@@ -1,0 +1,27 @@
+# Front Door AI Index — hydrahost — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: hydrahost
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: hydrahost.com
+  final_host: hydrahost.com
+  ownership: own
+  owner: hydrahost
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 22
+  host_score: 22
+  density: 25.14
+  words: 875
+  tiers:
+    agentic: 2
+    core: 20
+    model: 0
+  ambiguous: 1
+  top_terms:
+    AI: 20
+    inference: 2
+    automation: 1
