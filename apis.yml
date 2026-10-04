@@ -48,7 +48,7 @@ tags:
 - GPU Cloud
 - Bare Metal
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Cloud Infrastructure
 - Compute
 - Neocloud
@@ -61,6 +61,7 @@ tags_raw:
 - Cloud Infrastructure
 - Compute
 - Neocloud
+- Machine-Learning
 apis:
 - name: Brokkr API
   description: >-
