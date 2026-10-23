@@ -29,6 +29,28 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-network-edge.py
   first_seen: '2026-10-20'
+- partner_name: Hugging Face (hugging-face-hub)
+  partner: hugging-face
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: hugging-face-hub
+  evidence: https://huggingface.co/Hydrahost
+  mirror_of: hugging-face/integrations/hugging-face-integration-edges.yml
+  apps:
+  - Hydrahost/stable-diffusion-prompts.json
+  - Hydrahost/stable-diffusion-prompts
+  - Hydrahost/Meta-Llama-3.1-8B
+  - Hydrahost/stable-diffusion-3-medium-diffusers
+  listing_count: 2
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Hugging Face Hub datasets
+  badges:
+  - Verified publisher (Hugging Face verified organisation)
 generated: '2026-10-20'
 method: searched
 source:
@@ -41,3 +63,4 @@ checked:
 - https://www.peeringdb.com/api/fac
 - https://www.peeringdb.com/api/ix
 - https://www.peeringdb.com/api/net
+- hugging-face/integrations/hugging-face-integration-edges.yml
